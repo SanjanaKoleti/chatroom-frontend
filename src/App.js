@@ -378,8 +378,8 @@ useEffect(() => {
 //             }}
 //             style={{ padding: "10px", fontSize: "16px", width: "250px", border: "none", outline: "none" }}
 //           />
-<input
-            type="text"
+            
+            <input type="text"
             ref={inputRef}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
