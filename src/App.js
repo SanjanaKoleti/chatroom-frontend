@@ -129,7 +129,7 @@ function App() {
   const [messages, setMessages] = useState([]);
   const [showPicker, setShowPicker] = useState(false);
   const [showKeyboard, setShowKeyboard] = useState(false);
-  const [room, setRoom] = useState("general");
+  //const [room, setRoom] = useState("general");
 
   const messagesEndRef = useRef(null);
 
