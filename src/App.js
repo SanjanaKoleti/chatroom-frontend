@@ -5,7 +5,7 @@ import io from "socket.io-client";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://chatroom-qcmq.onrender.com");
 
 function App() {
   const [message, setMessage] = useState("");
