@@ -221,20 +221,7 @@ function App() {
   style={{ padding: "10px", fontSize: "16px", width: "250px", border: "none", outline: "none" }}
 />
 
-          // <input
-          //   type="text"
-          //   value={message}
-          //   onChange={(e) => setMessage(e.target.value)}
-          //   placeholder="Type a message..."
-          //   onClick={() => {
-          //     setShowKeyboard(true);
-          //     setShowPicker(false);
-          //   }}
-          //   onKeyDown={(e) => {
-          //     if (e.key === "Enter") sendMessage();
-          //   }}
-          //   style={{ padding: "10px", fontSize: "16px", width: "250px", border: "none", outline: "none" }}
-          // />
+          
 
         
           <button onClick={sendMessage} style={{ marginLeft: "5px", padding: "10px", border: "none", cursor: "pointer", background: "#007bff", color: "white", borderRadius: "5px" }}>
