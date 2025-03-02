@@ -360,24 +360,7 @@ useEffect(() => {
             {showPicker ? "⌨️" : "😀"}
           </button>
 
-          {/* Chat input field */}
-//           <input
-//             type="text"
-//             value={message}
-//             onChange={(e) => setMessage(e.target.value)} // Allow physical keyboard typing on desktop
-//             readOnly={isMobile} // Disable default keyboard on mobile, allow on desktop
-//             placeholder="Type a message..."
-            
-// {if (isMobile) {
-//                 setShowKeyboard(true); // Show virtual keyboard on mobile
-//               }
-//               setShowPicker(false);
-//             }
-//             onKeyDown={(e) => {
-//               if (e.key === "Enter") sendMessage();
-//             }}
-//             style={{ padding: "10px", fontSize: "16px", width: "250px", border: "none", outline: "none" }}
-//           />
+          
             
             <input type="text"
             ref={inputRef}
