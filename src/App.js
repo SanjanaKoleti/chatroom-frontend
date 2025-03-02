@@ -361,12 +361,12 @@ function App() {
             onChange={(e) => setMessage(e.target.value)} // Allow physical keyboard typing on desktop
             readOnly={isMobile} // Disable default keyboard on mobile, allow on desktop
             placeholder="Type a message..."
-            onClick={() => {
+            
               if (isMobile) {
                 setShowKeyboard(true); // Show virtual keyboard on mobile
               }
               setShowPicker(false);
-            }}
+            }
             onKeyDown={(e) => {
               if (e.key === "Enter") sendMessage();
             }}
