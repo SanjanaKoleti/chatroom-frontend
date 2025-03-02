@@ -213,7 +213,7 @@ function App() {
   value={message}
   onChange={(e) => setMessage(e.target.value)}
   placeholder="Type a message..."
-  readOnly // ✅ Prevents default keyboard from opening
+  readOnly 
   onClick={() => {
     setShowKeyboard(true);
     setShowPicker(false);
@@ -236,7 +236,7 @@ function App() {
           //   style={{ padding: "10px", fontSize: "16px", width: "250px", border: "none", outline: "none" }}
           // />
 
-          {/* Send button */}
+        
           <button onClick={sendMessage} style={{ marginLeft: "5px", padding: "10px", border: "none", cursor: "pointer", background: "#007bff", color: "white", borderRadius: "5px" }}>
             Send
           </button>
