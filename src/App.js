@@ -282,7 +282,7 @@ const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
     }, 3000); // Change quote every 3 seconds
 
     return () => clearInterval(quoteInterval);
-  }, []);
+  }, [quotes.length]);
 
   
   useEffect(() => {
