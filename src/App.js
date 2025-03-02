@@ -284,7 +284,13 @@ function App() {
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
-
+  
+useEffect(() => {
+    if (isMobile) {
+      setShowKeyboard(true);
+    }
+  }, []);
+  
   const sendMessage = () => {
     if (message.trim()) {
       socket.emit("sendMessage", { room, message });
@@ -355,24 +361,34 @@ function App() {
           </button>
 
           {/* Chat input field */}
-          <input
-            type="text"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)} // Allow physical keyboard typing on desktop
-            readOnly={isMobile} // Disable default keyboard on mobile, allow on desktop
-            placeholder="Type a message..."
+//           <input
+//             type="text"
+//             value={message}
+//             onChange={(e) => setMessage(e.target.value)} // Allow physical keyboard typing on desktop
+//             readOnly={isMobile} // Disable default keyboard on mobile, allow on desktop
+//             placeholder="Type a message..."
             
-{if (isMobile) {
-                setShowKeyboard(true); // Show virtual keyboard on mobile
-              }
-              setShowPicker(false);
-            }
+// {if (isMobile) {
+//                 setShowKeyboard(true); // Show virtual keyboard on mobile
+//               }
+//               setShowPicker(false);
+//             }
+//             onKeyDown={(e) => {
+//               if (e.key === "Enter") sendMessage();
+//             }}
+//             style={{ padding: "10px", fontSize: "16px", width: "250px", border: "none", outline: "none" }}
+//           />
+<input
+            type="text"
+            ref={inputRef}
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder="Type a message..."
             onKeyDown={(e) => {
               if (e.key === "Enter") sendMessage();
             }}
             style={{ padding: "10px", fontSize: "16px", width: "250px", border: "none", outline: "none" }}
           />
-
           {/* Send button */}
           <button onClick={sendMessage} style={{ marginLeft: "5px", padding: "10px", border: "none", cursor: "pointer", background: "#007bff", color: "white", borderRadius: "5px" }}>
             Send
