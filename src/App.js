@@ -289,7 +289,7 @@ useEffect(() => {
     if (isMobile) {
       setShowKeyboard(true);
     }
-  }, []);
+  }, [isMobile]);
   
   const sendMessage = () => {
     if (message.trim()) {
