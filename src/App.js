@@ -261,6 +261,7 @@ function App() {
   const [showPicker, setShowPicker] = useState(false);
   const [showKeyboard, setShowKeyboard] = useState(false);
   const [room] = useState("general");
+const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
 
   const messagesEndRef = useRef(null);
   const keyboardRef = useRef(null);
