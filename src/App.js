@@ -267,7 +267,23 @@ function App() {
   const inputRef = useRef(null);
   // Detect if the user is on a mobile or tablet
   const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+  ///////////////
+  const quotes = [
+    "Real talk, no filters, no faces.",
+    "Your thoughts, your space, no judgment.",
+    "Speak your mind, no names needed.",
+    "Share, connect, and explore—anonymously."
+  ];
+//////////////////////
+  useEffect(() => {
+    const quoteInterval = setInterval(() => {
+      setCurrentQuoteIndex((prevIndex) => (prevIndex + 1) % quotes.length);
+    }, 3000); // Change quote every 3 seconds
 
+    return () => clearInterval(quoteInterval);
+  }, []);
+
+  
   useEffect(() => {
     socket.emit("joinRoom", room);
 
@@ -326,7 +342,10 @@ useEffect(() => {
   
   return (
     <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h2>Chatroom</h2>
+      <h2>AnonimusChat</h2>
+      <div style={{ marginBottom: "20px", fontSize: "18px", fontStyle: "italic" }}>
+        <p>{quotes[currentQuoteIndex]}</p>
+      </div>
 
       {/* Chat messages */}
       <div
