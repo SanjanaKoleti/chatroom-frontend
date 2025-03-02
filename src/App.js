@@ -362,7 +362,7 @@ function App() {
             readOnly={isMobile} // Disable default keyboard on mobile, allow on desktop
             placeholder="Type a message..."
             
-              if (isMobile) {
+{if (isMobile) {
                 setShowKeyboard(true); // Show virtual keyboard on mobile
               }
               setShowPicker(false);
