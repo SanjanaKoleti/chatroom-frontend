@@ -1,72 +1,4 @@
-/*.chat-container {
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  .chat-box {
-    height: 300px;
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    padding: 10px;
-    background: #2a1e1e;
-    color: white;
-    border-radius: 10px;
-  }
-  
-  .chat-input {
-    background-color: #3b2d2c;
-    color: white;
-    padding: 12px;
-    border-radius: 10px;
-    border: none;
-    font-size: 16px;
-    width: 60%;
-    margin-top: 10px;
-  }
-  
-  .send-button {
-    background-color: #5a4242;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    margin-left: 10px;
-  }
-  
-  .toolbar {
-    margin: 10px 0;
-  }
-  
-  button {
-    background-color: #5a4242;
-    color: white;
-    padding: 8px;
-    border-radius: 5px;
-    margin: 5px;
-    cursor: pointer;
-  }
-  
-  .hg-button {
-    background: #5a4242 !important;
-    color: white !important;
-    border-radius: 5px !important;
-  }
-  
-  .hg-button:hover {
-    background: #7a5a5a !important;
-  }
-  .emoji-picker-container {
-    width: 100%; /* Full width 
-    max-width: 900px; /* Adjust this based on your keyboard width
-    margin: 0 auto; /* Center the picker 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
-}
-*/
+
 .chat-container {
     text-align: center;
     margin-top: 50px;
@@ -80,10 +12,10 @@
     background: #2a1e1e;
     color: white;
     border-radius: 10px;
-    margin-bottom: 10px; /* ✅ ADDED: Better spacing below chatbox */
+    margin-bottom: 10px; 
   }
   
-  /* ✅ NEW: Flex container for input, emoji, and send button */
+  
   .chat-input-container {
     display: flex;
     align-items: center;
@@ -95,7 +27,7 @@
     margin: 10px auto;
   }
   
-  /* ✅ NEW: Emoji Button */
+ 
   .emoji-button {
     background: transparent;
     border: none;
@@ -104,7 +36,7 @@
     margin-right: 10px;
   }
   
-  /* ✅ UPDATED: Input field styling */
+  
   .chat-input {
     flex: 1;
     padding: 10px;
@@ -115,7 +47,7 @@
     color: black;
   }
   
-  /* ✅ UPDATED: Send Button */
+  
   .send-button {
     background-color: #5a4242;
     color: white;
